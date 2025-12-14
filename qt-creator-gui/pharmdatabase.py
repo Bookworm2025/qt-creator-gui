@@ -2,6 +2,7 @@
 import sys
 
 from PySide6.QtWidgets import QApplication, QWidget
+from login_window import LoginWindow
 
 # Important:
 # You need to run the following command to generate the ui_form.py file
@@ -21,3 +22,18 @@ if __name__ == "__main__":
     widget = pharmdatabase()
     widget.show()
     sys.exit(app.exec())
+
+def main():
+    """Zamaibe Pharmacy Application"""
+    app = QApplication(sys.argv)
+
+    # setting application style
+    app.setStyle("Fusion")
+    # login window
+    window = LoginWindow()
+    window.show()
+    # starting the application
+    sys.exit(app.exec())
+
+    if __name__ == "__main__":
+        main()
